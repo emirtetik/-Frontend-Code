@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                        //    NESNE - this
+    //nesnenin içindeki this keywordu kendisine en yakin tanımlanmış olan değere bağlanmış oluyor.(this = kisi)
+    var kisi={
+        isim:"emir",
+        selamlasma: function () {
+                        return "merhabalar " +  this.isim;
+            
+        }
+    }
+                    // asagıdaki kodun dönüşü (merhaba emir ) olucaktır. çunku this kendisini kisiye bağladı.
+    kisi.selamlasma();  
+                                                //   2-part                  
+    var kisi={
+        isim:"emir",
+        selamlasma: function () {
+                        return "merhabalar " +  this.isim;       
+        },
+                                // burdaki this kullanımında cevap = {isim: 'emir', selamlasma: ƒ, test: ƒ} 
+        test: function(){
+            console.log(this);
+        }
+    }
+                                       //    3-part
+                        // ilk this karmasıkNesne ye bağlı ve kullanıldıgında tetik gelicek.         
+    var karmasıkNesne = {
+                    soyad:"tetik",
+                    cevap:function () { 
+                            return "nasılsınız " + this.soyad
+                    } ,
+
+                testet:function () {
+                         return this ===karmasıkNesne;
+               },
+                //    AMA ASAGIDAKİ THİS karmasıkNesne YE BAĞLI DEĞİL ONA EN YAKIN OLAN basitNesne YE BAĞLI. 
+        // nesne içinde nesne 
+               basitNesne:{
+                       selamlasma:function() {
+                                  return "nasılsınız " + this.soyad;
+                       },
+
+                       testet:function () {
+                         return this ===karmasıkNesne;                
+               }
+               }     
+            }
+                    // YA BEN basitNesne'YE OLAN THİS'İ KARMASIKNESNE'YE BAĞLAMAK İSTESEYDİM.                  
+    karmasıkNesne.basitNesne.selamlasma.call(karmasıkNesne);
+                                                            //  cevap = 'nasılsınız tetik' cevabı gelicek.
+                    // biz burda CALL ile karmaşık nesneyi çağırdık yani this'i karmaşık nesneye bağladık. 
+
+       var insan1={
+                  adı: "ugurcan",
+                  adınısoyle:function () {
+                      return "benim adım " + this.adı ;
+}}                      
+insan1.adınısoyle()
+'benim adım ugurcan'
+
+        var insan2={ 
+                    adı: "mahmut", 
+                    adınısoyle:function () {
+                              return "benim adım " + this.adı ;
+}}
+insan2.adınısoyle()
+'benim adım mahmut'
+
+
+        var insan3 ={
+                    isim:"cihan", 
+                    sarılma:function () { 
+                             return "merhaba ben " + this.isim;
+} }
+insan3.sarılma()
+'merhaba ben cihan'
+                        // burda (insan4 değerini insan3.sarılmayı call ile çağırarak) harun ismini getirdik.
+        var insan4 = {
+                   isim:"harun"}
+                      
+insan3.sarılma.call(insan4);
+'merhaba ben harun'
+
+                                    //  son örnek
+
+         function selamver() { 
+                          return "selamun aleyküm " + this.adi;}
+                    //    bir fonksiyon ile dışardan bir değeri çağırabiliyoruz (CALL).
+
+    var mustafa = { adi:"mustafa"}
+    var ümit ={ adi:"ümit"}
+
+    
+    selamver.call(mustafa)
+'selamun aleyküm mustafa'
+
+   selamver.call(ümit)
+   'selamun aleyküm ümit'
+    
+
+
+    </script>
+    
+</body>
+</html>

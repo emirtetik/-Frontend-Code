@@ -1,0 +1,18 @@
+  RENKLER VE ÇESİŞTLER
+decimal - base 10
+0,2,3,4,5,    10 seçenek
+
+binary-base 2
+0,1,2 seçenek
+
+hexedecimal-base 16
+0,1,2,3,4.......,9 .a.b.c.d.e.f 16 seçenek
+
+
+RGB(x,x,x)
+x = 0-256
+
+RGBA
+= 0 a nekadar yakınlaştırırsan okadar renk saydam olur.
+rgba
+ 

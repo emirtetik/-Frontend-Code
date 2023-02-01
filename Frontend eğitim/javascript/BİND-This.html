@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                        // BİND
+                                        
+    function toplama(a, b, c) { 
+                          return this.isim + " hesabı yaptı ve sonuc :" + (a + b + c);
+        
+    }
+   
+    var bilal = {ismi:"bilal" }
+    var enes = {ismi:"enes"}
+                                   
+                            //aşagıda test değerini tanımladık ama c. parametresini tanımlamadık. daha sonra test(3) yazarak 3 parametreyide döndürmüş olduk.
+    var test = toplama.bind(bilal, 1, 2);
+                        // bind ile tüm parametrelere ilk aşamada vermeyebiliriz.gelecek asamadada verebilriiz.
+    test(3) ;
+    'bilal hesabı yaptı ve sonuc :6'
+   
+                                       //    bu şekilde de 3 parametreyede değer verip yapabılırız.
+    var test = toplama.bind(bilal, 1, 2, 5);
+   
+    test() ;
+    'bilal hesabı yaptı ve sonuc :8'
+    
+
+                                        //   örnek-2
+                                                                //  3000 (mili second) 3sn.
+// bu örnekte eğer [cihad.selamlasma() ] yazarsanız 3 sn. sonra (merhabalar ben undefined ) yazısını görüceksiniz.çünkü normalde this cihad nesnesine bağlanıp (merhaba ben cihad) yazmasını beklerken orda geçen 3 sn.ye this' global olarak çalışıyor ve kendine en yakın olan (cihad) nesnesine bağlanmamakta.
+
+    var cihad = {
+                 ismi:"cihad",
+                 selamlasma: function () {
+                                          setTimeout(function(){
+                                            console.log("merhaba ben " + this.isim)
+                                           
+                                        },   3000 )     
+                                         } 
+               }
+                                //  bunun öüne bind ile geçebiliriz.    
+
+   var cihad = {
+                 ismi:"cihad",
+                 selamlasma: function () {
+                                          setTimeout(function(){
+                                            console.log("merhaba ben " + this.isim)
+                                           
+                                        }.bind(this),   3000 )     
+                                         } 
+               }
+                                  
+                                // .bind(this), kodunu zamanın önüne yazarak bu gecikmenin önüne geçip this  öğesini cihad nesnesine bağlayabilriz ve (merhaba ben cihad) yazdırabiliriz.
+                                  
+  
+            //  (setTimeout ) öğesi ise gecikmeli (asenkronize) fonksiyonlarında kullanılır.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

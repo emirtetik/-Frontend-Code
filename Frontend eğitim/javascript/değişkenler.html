@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devamlı soru</title>
+</head>
+<body>
+
+
+
+
+
+
+    <script>
+        //    parametresiz fonksiyon
+function ekranayazdir () {
+    var cevap=prompt("geldik mi?")
+   while (cevap!=="evet"&&cevap!=="evet") {
+   var cevap=prompt("geldik mi?")
+    }
+   alert ("ohh bee sonunda!!!")
+}
+ekranayazdir()
+
+                //   parametreli foksiyon
+    function toplama(p1, p2) {
+         console.log(p1+p2);
+    }
+ toplama(3, 6);              
+                // p1 ile p2 ye değer atayıp console logtan toplattım.
+                // DEĞER DÖNDÜREN FONKSİYONLAR
+    function carpma(p1,p2) { alert (p1*p2);     
+                             return p1*p2;   }            
+  carpma(2,6)    
+
+  var x = carpma (5,6)             
+        //  x'e değer atadığım için   geriye döndürdüğüm sayıya eşit oldu.
+                         //    SCOPE (KAPSAM )
+   var yas = 29 ;
+                                    //   function komutunun içine değer atadığım için (yasnedir) yazdığımda 30 geldi atamasaydım 29 gelicekti  ama dışardan değeri çağırsaydım func.  içindeki değeri çagıramıcaktım.   var sayı = 31  
+     function yasnedir() { 
+         var yas =31;
+        console.log(yas);        
+     }
+     yasnedir(); 31
+
+                            // ÖRNEK
+    function karsilastirma(sayi1,sayi2) {
+         if (sayi1>sayi2)  { alert(sayi1 + " büyüktür " + sayi2 + "'den")
+                     }
+        else if (sayi1<sayi2) { alert (sayi1 + " küçüktür " + sayi2 + "'den" )
+        }    
+                            //   else yazdığımız için şart koymadık şartlar olmasa bile komut işlicekti.        
+       else {
+        alert (sayi1 + " ve " + sayi2 + " birbirine eşittir. ")}          
+    }                        
+    karsilastirma(16,16)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>farklı bir yöntem</title>
+</head>
+<body>
+      <div class="container"
+      onmouseover="test(this)"
+      onmouseout="testo(this)"
+     style="background-color: aqua ; width:120px; height:20px; padding: 30px;">
+        Ustune Gel
+    </div>
+<!--html tarafında ilk önce bir div açtık ve içine  (style) ekledik rengi ve boyutları gibi şeyler. -->
+    <!-- Daha sonra (onmouseover) ile mousun bu div'in üstüne geldiğinde ne yazının değişmesi için bir event koyduk bunuda tabiki bir fonksiyonuna bağlamamız gerekiyor. o script tarafında anlatılacaktır. -->
+   <!-- 3. adımda tam tesi mousumuz div' ünstünden çektiğimizde yazmasını istediğimiz metin için (onmouseout)eventini koyduk.  -->
+                           
+             
+                   <!-- burdaki detay java ile html div'ini onmouseover-onmouseout yanına this keywordu ile bağlamamızdır. -->
+    <script>
+                            // script tarafında ise mouse'nin hem div'in üstündeyken ve değilken ne yazılması gerektiği için bir foksiyon kodladık.
+                    
+                        //   ilk olarak bir function yazıp adına test dedik ve ona nesne parametresini verdik.
+                        //   nesne parametresi ile innerHTML dom uzantısı sayesinde mouse div'in üstündeyken ne yazmasını istediğimiz texti yazdık.
+        function test(nesne) {
+            nesne.innerHTML="Teşekkürler";           
+        }
+        function testo(nesne) {
+            nesne.innerHTML="Teşekkürler javascript";
+        }
+                            //   2. adımda ise bir başka function ile testo ismini atayıp mouse'un üstünde değilken ne yazmasını istediğimiz texti yazdık.
+
+
+    </script>
+</body>
+</html>

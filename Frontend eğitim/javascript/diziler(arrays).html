@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+                           //  Array bir çok değerin tutulduğu konteyner.
+var arkadas = "mahmut"
+var arkadas1 = "bilal"
+var arkadas3 = "osman"
+var arkadas4 = "enes"
+                //    0          1        2        4
+var arkadaslarım = ["mahmur" , "bilal" , "enes" , "osman"]
+
+// arkadaslarım[3] = enes gelicekti.
+// arkadaslarım[5] = "emir";      conteinera elaman ekleyebilirim.
+
+                        // ARRAY CLASSLARI -METODLARI                
+            //    0        1       2      3        4 = beyaz kodlara bak kırmızı silindi beyaz eklendi.
+var renkler = ["kırmızı","mavi","sarı","yeşil"]
+renkler                                          
+                                                //   kırmızı silindi 0 indeksine gri atandı son endekse beyaz
+renkler[4]="siyah";
+renkler
+renkler.pop()         
+                                    // pop her zaman array konteynerın son değerini getirir ve siler.
+renkler.push("beyaz")         
+                                    // pusha  yeni değer atar ve konteynerın içinde kaç değer var onu söyler
+
+renkler.shift()
+                                    // shift ilk değeri siler. 
+renkler.unshift("gri")                  
+                                    // unshift ise 0 indeksine değer tanımlar ve kaç değer var boyutunu söyler.
+renkler.indexOf("mavi");
+                                    // indexOf ise yazdığınız değerin kaçıncı indek olduğunu söyler. = 1    
+
+for (var i=0 ; i< renkler.length; i++) {
+                      console.log(renkler[i]);}      
+                                         //length (uzunluk)  bu loopta dönen değer 5 olucak çünkü length
+                                    //  toplam değeri tanımlar  tekrar  tekrar  yazmak yerine tekrara alıcak 
+    
+renkler.forEach (function(renkler) { 
+                      console.log(renkler);    
+} )
+                                      
+                                    // forEach parantezini en son kapat yoksa hata olur.
+                                // forEach bize function değişkeni ile kısa kodlama şekilde bir döngü yapar.
+</script>
+</body>
+</html>

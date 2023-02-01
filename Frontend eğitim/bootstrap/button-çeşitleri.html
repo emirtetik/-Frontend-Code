@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button çeşitleri- bootstrap</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+ <body>
+                                               <!-- button ve çeşitleri     -->
+    <div class="container">
+        <hr><hr><hr><hr>
+        <button type="button" class="btn">basic</button>
+        <button type="button" class="btn btn-info">info</button>
+        <button type="button" class="btn btn-primary">btn-primary</button>
+        <button type="button" class="btn btn-danger">btn-danger</button>
+        <button type="button" class="btn btn-dark">dark</button>
+        <button type="button" class="btn btn-light">btn-light</button>
+        <button type="button" class="btn btn-secondary">btn-secondary</button>
+        <button type="button" class="btn btn-success">success</button>
+        <button type="button" class="btn btn-warning">btn-warning</button>
+        <button type="button" class="btn btn-link">link</button>
+        
+        <hr><hr><hr><hr>
+                                              <!-- hover efekti olan butonlar : -outline- -->
+        <button type="button" class="btn btn-outline-primary">btn-primary</button>
+        <button type="button" class="btn btn-outline-secondary">btn-secondary</button>
+        <button type="button" class="btn btn-outline-info">info</button>
+        <button type="button" class="btn btn-outline-success">success</button>
+        <button type="button" class="btn btn-outline-warning">btn-warning</button>
+        <button type="button" class="btn btn-outline-light">btn-light</button>
+        <button type="button" class="btn btn-outline-dark">dark</button>
+        <button type="button" class="btn btn-outline-danger">btn-danger</button>
+        
+        <hr><hr><hr><hr>
+                                             <!-- buton sizeları(boyutları) -->
+        <button type="button" class="btn btn-primary btn-lg">large</button>
+        <button type="button" class="btn btn-primary">normal</button>        
+        <button type="button" class="btn btn-primary">small</button>        
+               
+        <hr><hr><hr><hr>
+                                                 <!-- basılamayan buton     -->
+        <button type="button" class="btn btn-primary active">active primary</button>
+        <button type="button" class="btn btn-primary" disabled>disabled primary</button>
+        <a href="#" class="btn btn-primary disabled">disabled link</a>
+                
+        <hr><hr><hr><hr>
+                                               <!-- yan yana bitişik butonlar  -->
+        <div class="btn-group">
+           <button type="button" class="btn btn-primary">apple</button> 
+           <button type="button" class="btn btn-primary">samsung</button> 
+           <button type="button" class="btn btn-primary">sony</button> 
+        </div>
+
+        <hr><hr><hr><hr>
+                                                   <!-- dikey yönde butonları birleştirir.  -->
+        <div class="btn-group-vertical">
+           <button type="button" class="btn btn-primary">apple</button> 
+           <button type="button" class="btn btn-primary">samsung</button> 
+           <button type="button" class="btn btn-primary">sony</button> 
+        </div>
+
+        <hr><hr><hr><hr>
+                                           <!-- butonun içine menü ekleme -->
+        <div class="btn-group">
+           <button type="button" class="btn btn-primary">apple</button> 
+           <button type="button" class="btn btn-primary">samsung</button> 
+
+        <div class="btn-group">
+           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">sony</button>             
+
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">tablet</a>
+            <a class="dropdown-item" href="#">smartphone</a>
+        </div>
+       </div>
+      </div>
+      <hr><hr><hr><hr>
+    </div>
+    
+</body>
+</html>

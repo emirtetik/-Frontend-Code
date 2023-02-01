@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+                                       // nesneler süslü parantez ile 
+                                         // arrayler ise kapalı parantez
+
+
+
+      // 0         1     2      3
+      var kisi = ["cihan mehmet", "doğan", 26, "istanbul universitesi"];
+      kisi;
+      kisi[1]=25;
+        //index sıralamasını unutup ve yaşını gibi sayıları kelimeleri unutursan yapının içine başka bir değer  daha atamış olursun ve yapı mahvalur.
+
+      var kisi = {
+        ismi: "cihan mehmet",
+        soyadı: "doğan",
+        yas: 26,
+        universitesi: "istanbul universitesi",      };
+                    //eğer değer atamasını belirterek yazarsak asagıdaki gibi istediğimiz indexsi çağırırız.
+      console.log(kisi.universitesi);
+      console.log(kisi.soyadı);
+                 //alttaki örnekte 2. indekse değer atadığımız için bu şekilde yapı bozulmadan yaş kısmını değiştirebiliriz.
+      kisi.yas = 25;
+      console.log(kisi.yas);
+      //    diğer bir örnekte bu kodlama ile çağırabılırız.
+      kisi["ismi"];
+
+                                    //  NESNE OLUŞTURURKEN YAPMAMIZ GEREKENLER
+
+    var ogrenci = {
+                   1.adı:"mustafa",
+                  birinci adı:"mustafa",
+                    not:"75"
+    }; 
+             // rakamla ve arada boşluk bırakarak başlayan bir değişken tanımlamayı kabul etmiyor. (1.,2,4,3)
+    
+
+                        //   ARRAYLER VE NESNELER 
+                         
+                    //    0         1         2          3
+    var sehirler = ["adana", "mersin", "kocaeli" ,"sakarya"];
+      
+    sehirler.push ("ankara")
+                            //   push ile array içine son sıraya ekstra değer atadık.
+    var sehir ={
+                il:"istanbul",
+                ülke:"türkiye"    };                        
+
+//sehir.ülke  = türkiye gelicek 
+ 
+                        // nesnelerin içine yeni eleman eklemeyi asıgıdaki gibi yapıyoruz.             
+    sehir.tarihi = 2000; 
+
+
+sehirler[0]     
+                // arrayler bu şekilde çağrılır.
+
+sehir.tarihi  
+                // nesnelerde ise dot koyarak çağrıyoruz.
+
+
+
+    </script>
+  </body>
+</html>

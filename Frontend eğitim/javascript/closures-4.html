@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                    //  privisy özelleğimizi korumak
+                    
+    function programlamaDilleri() {
+                                   var diller = ["javascript" , "java"];
+               
+                return { 
+                         getDiller : function () {
+                              return diller;                            
+                                                 },
+                         addDil : function (dil) {
+                            diller.push(dil);
+                            return diller;           
+                                                 } 
+                       }        
+                                  }    
+                                        //    bunu istemiyoruz. silinmemesi lazım korumamız
+    var ilk = programlamaDilleri()
+     
+    ilk.getDiller()
+['javascript', 'java']
+
+    ilk.getDiller().pop();
+['javascript']
+
+
+
+
+
+                                //    hatamız arrayin kendisine direk gönderiyoruz.
+function programlamaDilleri() {
+                                   var diller = ["javascript" , "java"];
+               
+                return { 
+                         getDiller : function () {
+                              return diller.slice();                            
+                                                 },
+                         addDil : function (dil) {
+                            diller.push(dil);
+                            return diller.slice();           
+                                                 } 
+                       }        
+                                  } 
+                                    // biz burda SLİCE() yazarak arrayin kopyasını göndermiş oldugumuz için gerçek arraye dokunamıcaklar.   
+    
+    var ikinciteto = programlamaDilleri()
+
+    ikinciteto.getDiller()
+['javascript', 'java']
+                                    //   aşagıda java silinmiş gibi görünsede aslını silemedi.
+    ikinciteto.getDiller().pop();
+['java']
+                                    //   aşagıda biz aslını döndurdugumuz için java silinmedi.
+    ikinciteto.getDiller()
+['javascript', 'java']
+                                //    addDilleri kullanarak ruby son üye olarak ekledik.   
+   ikinciteto.addDil("ruby")
+                            // addDiller içinde slice() kulladıgımız içinde ruby silmeye kalksak bile yıne silinmicektir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

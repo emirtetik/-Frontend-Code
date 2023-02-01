@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                                    // CLOSURES-2
+                                    // PRİVİTE VALİABLE
+                                                        // 2. fonksiyona değer vermedik yani anonymous
+    function toplama(a) {
+                       return function(b){
+                           return a+b;
+                       }     
+    }                                                 
+    // toplama(5)(8)  = 13 olucaktır.
+
+    var nesne1 = toplama(10);
+                                    //nesne1 yazarsak konsola bu sekilde anonymous fonksiyonunu döndürücektir. ama (A)'ya verdiğimiz 10 değerini aklında tutuyor olucak.
+    // nesne1
+    //       (b){
+    //         return a+b;
+    //                    }
+
+                            //   konsola  nesne1(8) yazdıgımız zaman (B) ye atadığımız 8 değeri ile daha önceden (A)' ya atadıgımız 10 değerini toplıcaktır.                            
+    nesne1(8)
+    +18
+
+
+  
+     
+     function sayac() {
+                       var sayı =0;
+
+                      return function iceri() {
+                                    sayı++;
+                                 return sayı;   
+                      }
+     }
+
+                                            // sayac1'i sayac fonksıyonuna tanımlamış olduk.
+    var sayac1 = sayac()
+                                        //sayac1 yazarsak konsola iceri fonksiyonunu bize geri döndürecektir.
+    sayac1            
+           iceri() {
+                                    sayı++;
+                                 return sayı;   
+                      }
+                                    // eğer ben fonksiyon olarak sayac1'i çagrırsam sonuç 1 olucaktır. birdaha çagırsam 2 sonra 3 olucak çunku iceri fonksiyonumuza tanımladıgımız sayı++
+                                    // koşulunu gerçekleştırıcektir.
+    sayac1()
+    1 
+    sayac1()
+    2
+    sayac1()
+    3
+
+                                // bu seferde sayac2 değerini sayac() donksiyonuna tanımladık.
+   var sayac2 = sayac()
+  
+   sayac2() 
+   1
+   sayac2() 
+   2
+   sayac2() 
+   3
+                                //  bu tanımdaladıgımız değerde yine aynı şekilde 1 den başlayarak devam edicektir. yani sayac1 ile sayac2 yazdıgımız surece kendi kaldıkları yerden devam edicekler birbirlerine karışmıcaklar. privite koşulunu karşılıyor.
+    
+
+
+
+
+    </script>
+    
+</body>
+</html>

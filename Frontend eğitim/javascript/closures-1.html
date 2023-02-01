@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                        //    CLOSURES
+
+                                        //   asagıdaki kodlamada closures vardır fonksiyon içinde geriye döndürülen fonksiyon içinde bi üstteki fonksiyonu döndürüyorsak closuresdır.
+    function outer() {
+                       var değis = "closures ogrenmek ";
+
+                    return function  iceri() {
+                                     return değis + "cok kolaydır. "
+                    }
+    }
+
+
+                                        //bu örnekte closures yoktur. çunku ilk fonksıyondaki TEST değişkenini en altta gordünuz gıbı döndürürken dışardan fonksiyon çagırmadan döndürdük.     [ yani fonksiyon içerisinden fonksiyon çagırıyoruz.]
+    function test() { 
+                var  test="bu bir test denemesidir. ";
+        
+              return function testİceri (){
+                                    return "bu da diğer örnek "
+              }  
+    }
+
+                                    //  test() yazarsak testİceri fonksiyonunu bize döndürcektir.
+     test()
+            testİceri (){
+                         return "bu da diğer örnek "
+                           }
+                                   //eğer test()() bu şekilde yazar isek fonksiyon içerisinden fonksiyon çagırıyoruz.              
+    test()()
+'bu da diğer örnek '
+
+    
+                                //    closures'li ilk örnek 
+                       
+                        //  bu örnekte outer() yazarak closures oldugu için bu fonksiyonda içerideki değiskene ulaşabılıyoruz yanı (degis) tanımına                             
+    outer()
+                 iceri() {
+                               return değis + "cok kolaydır. "
+                              }
+
+                                    // yine aynı şekilde cift parantez ile içerdeki fonksiyonu çagırabılıyoruz.
+   outer()()
+'closures ogrenmek cok kolaydır. '
+
+
+                                    //  CLOSURES MANTIGI
+
+function outer() {
+                       var değis = "closures ogrenmek ";
+
+                    var hatırlama = "bu da bir test değişkenir";
+    
+                    return function  iceri() {
+                                                  debugger    
+                                                  return değis + "cok kolaydır. "
+                    }
+    }
+
+   outer()()
+        //  yazdığımız zaman konsola  debugger yazdıgımız için tam orada durdurdugumuz için alamıcaz.
+
+    hatırlama()
+            // bu şekilde konsola yazdıgımız zaman outer fonksiyonun içindeki (hatırlama) değerinede ulaşamıcaz
+            //    çunkü en alttaki fonksiyonun içinde döndürmediğimiz yazmadığımız için (closures) değildir. 
+                            // privite olarak fonksiyon içinde bi değer olarak kalıcaktır.
+    </script>
+    
+</body>
+</html>

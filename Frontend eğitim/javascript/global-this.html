@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                    //    this = global (heryerden erişilebilen) 
+                                    //    this = object implisid (nesnenin içinde kullanılmış ise denir.)
+                                                        
+                                //    GLOBAL (this)  WİNDOW = AÇILMIŞ PENCERE
+                        //   blok {} = {function yada nesne oluşturuken kullanırız.}
+    var kisi="emir";                            
+     //yukarıdaki kodda blok içine tanımlamadığım için window komutuna yani vahşi ortamda tanımlamışım gibi.
+    window.kisi === kisi (true)
+    window.kisi === this.kisi (true)
+    kisi === this.kisi (true)
+    
+    
+                                //  eğer (ornek) yazarak Data'yı çağırmaya çalışırsak gelmicektir. çünkü kapalı bir yapıdan oluşur ve windowa bağlı değildir.
+    function ornek() {
+             var data = "Data";
+    }
+
+                                //  asagıdaki gibi this kullanırsak bu şekilde Data2 yi ornek2 yazarak çağıra biliriz. çünkü this burda globaldir ve dışarıya bağlar. BUNU İSTEMEYİZ.
+     function ornek2(){
+             this.data2="Data2";
+     }
+
+                                //    "use strict"  kodu ile dışarıya olan bağlantıyı koruyabiliriz.
+    "use strict"                           
+     function ornek2(){
+             this.data2="Data2";
+     }
+    
+   
+    
+                            //this bir nesnenin içinde tanımlanmadığı için asağıda global olarak döndürüyor.
+    function nedirbuthis(){
+        return this;
+    }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

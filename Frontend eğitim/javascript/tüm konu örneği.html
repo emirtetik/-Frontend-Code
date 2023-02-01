@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var filmler = [
+        {adi : "sandman",
+         puani : "7.5",
+         izlenme : true
+                 } ,
+        {adi : "fate/zero",
+        puani : "8.7",
+        izlenme : false
+        }         
+     ] 
+                                            //bu komutu kullanarak array içindeki film adlarını dönderebiliriz.
+    filmler.forEach (function (film) {
+                   console.log(film.adi);        
+    }) ;
+                                        // bu komut ile tüm Objectleri döndermiş olduk.
+    filmler.forEach (function (film) {
+                   console.log(film);        
+    
+    });
+    
+                                            //  if = true ise çalışıcak.
+                                            // else = yanlış ise çalışıcak.
+                                       // bu kodlamada fonksiyona verdiğin değeri kullanmayı unutma.      
+         filmler.forEach (function (film) {
+            
+            if (film.izlenme) {
+               console.log("filmin adi : " + film.adi + " ve izlendi. puanı ise " + film.puani)
+        }      else {  
+               console.log("filmin adi : " + film.adi + " ve izlenmedi. puanı ise " + film.puani)
+                       
+        }    
+            
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

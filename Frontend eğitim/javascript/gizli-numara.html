@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tahmin etme oyunu</title>
+</head>
+<!-- <script src="oyun.js"></script>       bu şekide de dışardan js çağırabılırız. -->
+<body>
+<script>
+  
+  var gizlinumara = 15;
+var kullanıcınumara = prompt ("bir sayı tahmin et");
+var tahmin = Number(kullanıcınumara);
+ 
+if (tahmin===gizlinumara) {
+alert("evet gizi numarayı buldun. gizli numara " + gizlinumara  +  " idi.");    
+} else if (tahmin > gizlinumara){
+    alert("çok büyük tahmin ettin birazcık düş.")
+} else {alert("çok küçük tahmin ettin. birazcık daha çık.")}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

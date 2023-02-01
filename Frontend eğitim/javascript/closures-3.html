@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                            //    ileri-privite-closures
+
+                                    //  programlamaDilleri adında bir fonksiyonum var bu fonksiyon içerisinde javascript ve java adında bir arrayim  var (diller) adında. bu programlama dilleri  bize bir nesne geriye döndürüyo. nesne içindeyse 2 tane fonksiyonum var (getdiller) ve (adddil) diye.      
+
+    function programlamaDilleri() {
+             var diller = ["javascript" , "java"];
+               
+                return { 
+                         getDiller : function () {
+                              return diller;                            
+                         },
+                         addDil : function (dil) {
+                            diller.push(dil);
+                            return diller;           
+                         } 
+                }        
+    }
+
+                                        // ilktest değerimi programlamaDilleri fonksiyonuna tanımladım.
+  var ilktest= programlamaDilleri();
+
+ //    deneme                         konsola asagıdakı gıbı yazarsak sonuc bu sekılde olucaktır.
+    ilktest.getDiller()
+['javascript', 'java']
+
+                                //bu sekilde bir komut girersek array içine son üye olarak (C++) giricek.    
+   ilktest.addDil("c#")
+['javascript', 'java', 'C++']
+
+                                    //  bu kodlama ilede arrayın içindekileri görebiliriz.
+   ilktest.getDiller()
+['javascript', 'java', 'C++']
+
+
+
+                                        // ikincitest değerimi programlamaDilleri fonksiyonuna tanımladım.
+                                          
+     var ikincitest = programlamaDilleri();
+
+ 
+     ikincitest.getDiller()
+['javascript', 'java']
+
+                                       // görüceniz üzere ikincitest değerim ile tanımladığım ve arrayime atadğım (C#) ekllediğim dil arrayıme geldi ama C++ yok 2 farklı array tanımlamış olduk.   
+    ikincitest.addDil("C#")
+['javascript', 'java', 'C#']    
+
+
+                     //  ÖNEMLİ         //   bu kullanım ilede arrayin içindeki son üyeyi getirip silebiliriz. 
+   ikincitest.getDiller().pop()
+'C#'
+   ikincitest.getDiller()
+['javascript', 'java']
+                                    //  BURDA ÖNEMLİ OLAN BİZİM POP İLE ARRAYİMİZİ MANİPULE ETTİRMEMİZ.
+                                    //  YANİ Privacy özelliğini kaybetmiş olucak bunu diğer derste öğreniceksin.
+
+
+
+
+
+    </script>
+
+</body>
+</html>

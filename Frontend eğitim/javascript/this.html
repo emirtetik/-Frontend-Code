@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                            // THİS 
+    var yazılımDilleri ={ };
+
+    yazılımDilleri.data=["java","c++","html","css", "c#"] ;    
+                                            // yukardaki nesne ile asagıdakı fonksiyonun bağlantısı yok. 
+    function yazdir(arr) {
+                 arr.forEach(function(madde)  {
+                 console.log(madde)   
+                 });
+    }
+                                        // asagıdaki yapı ile dışardan oluşturduğumuz fonksiyon ile objectin içindeki arrayi ekrana yazdırdı.  
+    yazdır(yazılımDilleri.data);
+  
+                                // nesnemle ilgili bi fonksıyon tanımlamak istiyorum. dışardan tanımladığımız yazdir fonksiyonu ama bu nesneyle ilişkilendirmek istiyor isek ;
+    
+    yazılımDilleri.yazdir = function () {
+                 this.data.forEach(function(madde)  {
+                 console.log(madde)   
+                 });
+    }
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

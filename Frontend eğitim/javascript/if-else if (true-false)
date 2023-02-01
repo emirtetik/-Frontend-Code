@@ -1,0 +1,44 @@
+
+
+                                TRUE-FALSE
+      
+[x == y] = (x y'ye  eşittir doğru mu anlamı taşıyor.) 
+
+[!] değil mi  =  {x != y} = (x,y'ye eşit değil mi) anlamı taşıyor.
+
+[===]  =  tipini karşılaştırıyor.
+
+[0] = default değeri false.
+
+[boolean] = 0 , emty "" , null , değer sayı değil ise sonuç= 0 = false
+
+              
+
+                                      ŞARTLAR          
+        x=3   y=8
+
+if(x==y){alert("x y'ye esit imiş.")} else { alert("x y'ye esit değil imiş.")}  ilk bölumde x y'ye eşit olmadıgı için ikinci kodda yazan else kısmı çalışıcaktır. 
+ 
+if = eğer şartlarım olursa çalıştır.
+
+else if = şartlarımdan biri olursa çalıştır.
+
+else = çalışma şartım ne olursa olur olmassa yinede çalıştır. mesela 19 dan kuçukse çalıştır değilsede çalıştır.
+
+                                       DÖNGÜLER
+
+   [belli şartlar sağlayıp o şartlar bozulunana kadar o kodun devamını sağlamak.]
+
+WHİLE : (şart) = şart sağlandığı sürece kod devam edicek.
+
+DO : {önce kod koşturuluyo} sonra şart karşılanıyosa devam yada devam etmiyor. WHİLE (şart)
+                                                                                                                                                    (çalıştır.)
+FOR : ( değer ataması ; şart ; nasıl devam etsin ; )  ÖRNEK = for (var i=0 (DEĞER atadık) ; i < 10; (ŞART koyduk) i++ (İSTEDİĞİMİZ DEVAMLILIK) )  {console.log(i);}
+
+                                           FONKSİYONLAR
+
+FUNCTİON+BİR ŞEY YAZ ();{console.log("hello world"); } == fonksiyonlar aynı kodları tekrar yazmak yerine ona bi isim takım devamını sağlayabılmemıze yarıyor.
+      
+    ÖRNEK== function ekranayazdir(){console.log("ekrana değer yazabilirim");}
+                                                                                     ekranayazdir (); = ekrana değer yazabilirim
+ 

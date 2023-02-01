@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+                                    // arrayler ve nesnelerin iç içe geçmiş hali
+        //   array                          
+    var paylasımlar =[
+        // NESNE                                       array [object,object]
+    {baslık:"Yazlım",
+    yazar:"Emir Tetik",
+                    // array[Object{array[object]},Object] array içine nesneler nesnelerin içine array.      
+    yorumlar:[ {içerik: "yazılım hayattır", yazar: "enes sarı"}]
+
+                  },
+    {baslık:"donanım",
+    yazar:"burak aydoğan",
+    yorumlar:[{içerik: "yazılım bazen hayattır", yazar: "bilal gumus"}]
+     
+    }              
+    ]                                
+  paylasımlar[0].yazar   
+                            //    bu çağırmanın sonucu (emir tetik) yani 0. indeksin yazar değerini taşınan. 
+  paylasımlar[1].yorumlar
+                                //  cevap = (frontend yazılım hayattır,yazılımı seviyorum.)
+  paylaşımlar[0].yorumlar[1]                                    
+                                    // cevap = (yazılımı gerçekten seviyorum.) 
+  paylaşımlar[1].yorumlar[0]
+                                //    cevap = (frontend yazılım hayattır.)
+
+
+    // array      array     nesne
+  paylasımlar[0].yorumlar[0].yazar
+
+  paylasımlar[0].yorumlar[0].yazar
+'enes sarı'
+paylasımlar[1].yorumlar[0].yazar
+'bilal gumus'
+paylasımlar[0].yorumlar[0].içerik
+'yazılım hayattır'
+
+</script>    
+</body>
+</html>
